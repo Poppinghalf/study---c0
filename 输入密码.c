@@ -4,8 +4,9 @@ int main(){
     int password;
     printf("请输入密码:\n");
     scanf("%d",&password);
+    getchar();//带走输入缓冲区的"\n""
     printf("确认密码?\n(Y/N)\n");
-    scanf("%s",&ch);
+    ch = getchar();
 if(ch == 'Y')
     {printf("确认密码\n");
     if(password == 1234)
