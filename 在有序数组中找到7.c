@@ -3,11 +3,11 @@ int main()
 {
     int arr[]={1,2,3,4,5,6,7,8,9,10};
     int k = 7;
-    int sz = sizeof(arr)/sizeof(arr[0]);
+    int sz = sizeof(arr)/sizeof(arr[0]);//元素个数
     printf("元素个数是%d\n",sz);
-    int left = 0;
-    int right = sz-1;
-    int mid;
+    int left = 0;//左下标
+    int right = sz-1;//右下标
+    int mid;//中间值
     while(left<=right)
     {
     mid = (left+right)/2;
