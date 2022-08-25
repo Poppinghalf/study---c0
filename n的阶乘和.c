@@ -4,7 +4,10 @@ int main(){
     int n = 0;
     int ret = 1;
     int sum = 0;
-for(n =1;n<=3;n++)
+    int bb;
+    printf("ÇëÊäÈën\n");
+    scanf("%d",&bb);
+for(n =1;n<=bb;n++)
 { 
     ret = 1;
     for(i=1;i<=n;i++)
