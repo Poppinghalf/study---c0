@@ -26,7 +26,7 @@ int main()
 //     int count = 0;
 //     for(year = 1000;year<=2000;year++)
 //     {
-//         if(year % 4 == 0 && year%100 != 0 ||year % 400 == 0)//使用逻辑或||
+//         if(((year % 4 == 0) && (year%100 != 0)) || (year % 400 == 0))//使用逻辑或||
 //         {
 //             printf("%d  ",year);
 //             count++;
