@@ -8,7 +8,7 @@ int main()
         for(b=1;b<=a;b++)
         {
             int c = a*b;
-            printf("%d*%d = %d ",a,b,c);
+            printf("%d*%d=%2d  ",a,b,c);
             if(b == a)
             {
                 printf("\n");
