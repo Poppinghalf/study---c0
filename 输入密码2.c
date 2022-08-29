@@ -4,21 +4,22 @@ int main()
 {
     char password[20];
     int i;
-    for(i=1;i<=3;i++)
+    printf("ÇëÊäÈëÃÜÂë\n");
+    for(i=1;i<=5;i++)
     {
-        printf("ÇëÊäÈëÃÜÂë\n");
         scanf("%s",password);
         if(strcmp(password,"123456") == 0)
             {
-                printf("µÇÂ¼³É¹¦\n");
+                printf("ÃÜÂëÕýÈ·\n");
             break;
             }
         else
             {
-            printf("ÃÜÂë´íÎó£¬ÇëÖØÊÔ\n");
-            }
+            int c = 5-i;
+            printf("ÃÜÂë´íÎó,Äã»¹ÓÐ%d´Î»ú»á\n",c);
+            }4
     }
-    if(i==4)
-    printf("ÃÜÂë´íÎóÈý´Î£¬ÕË»§Ëø¶¨");
+    if(i==6)
+    printf("ÃÜÂë´íÎóÎå´Î,ÕË»§Ëø¶¨\n");
     return 0;
 }
