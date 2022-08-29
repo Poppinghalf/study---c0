@@ -15,11 +15,11 @@ int main()
     {
         right = mid-1;
     }
-    else if(arr[mid] < k)
+        else if(arr[mid] < k)
     {
         left = mid+1;
     }
-    else
+        else
     {
         printf("找到了，下标是：%d\n",mid);
     break;   
@@ -44,12 +44,12 @@ return 0;
 //             printf("找到了，下标是：\n%d",a);
 //             break;
 //         }
-
-//     }
+//     }    
 //     if(a==sz)
 //     printf("找不到");
 //     return 0;
 // }
+
 // #include<stdio.h>
 // int main()
 // {
