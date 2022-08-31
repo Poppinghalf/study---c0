@@ -3,7 +3,8 @@
 
 char arr[] = {1,2,3,4,5,6,7,8,9,10};
 
-void search(int x)
+
+int search(int x)
 {
     int left  =  0;
     int sz = sizeof(arr)/sizeof(arr[0]);
@@ -22,13 +23,12 @@ while(left<=right)
     }
     else
     {
-        printf("找到了,下标是%d\n",mid);
-        break;
+        return mid;
     }
 }
 if(left>right)
 {
-    printf("找不到\n");
+    return -1;
 }
 }
 
@@ -38,6 +38,14 @@ int main()
     int n;
     printf("请输入1-10的数字\n");
     scanf("%d",&n);
-    search(n);
+    int ret = search(n);
+    if(search(n)==-1)
+    {
+        printf("找不到\n");
+    }
+    else
+    {
+    printf("找到了，下标是%d",ret);
+    }
     return 0;
 }
