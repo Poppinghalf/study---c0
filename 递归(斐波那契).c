@@ -14,6 +14,21 @@ int fib(int x)
     }
 }
 
+int fib2(int x)
+{
+    int a = 1;
+    int b = 1;
+    int c;
+    while(x>2)
+    {
+        c = a+b;
+        a = b;
+        b = c;
+        x--;
+    }
+    return c;
+}
+
 
 int main()
 {
@@ -21,6 +36,8 @@ int main()
     printf("ÇëÊäÈëÊı×Ö\n");
     scanf("%d",&a); 
     int b = fib(a);
+    printf("%d\n",b);
+    int c = fib2(a);
     printf("%d",b);
     return 0;
 }
