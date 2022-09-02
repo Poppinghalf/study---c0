@@ -7,6 +7,6 @@ int main()
     for(i=0;i<=sz;i++)
     {
         printf("arr[%d] = %p\n",i,arr[i]);
-    }//数组在内存中是连续存放的
+    }//数组在内存中是连续存放的，并且从低地址到高地址
     return 0;
 }
