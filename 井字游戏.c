@@ -77,7 +77,7 @@ void playermove(char board[hang][lie],int x,int y)//人走
         scanf("%d%d",&i,&j);
         if(i>x||j>y||i<1||j<1)
         {
-            printf("你要下到那里去？？\n");
+            printf("你要下到哪里去？？\n");
             continue;
         }
         if(board[i-1][j-1] == ' ')
@@ -93,7 +93,7 @@ void playermove(char board[hang][lie],int x,int y)//人走
 }
 
 
-void chushihua(char arr[hang][lie],int x,int y)//初始化棋盘为全空
+void chushihua(char board[hang][lie],int x,int y)//初始化棋盘为全空
 {
     int i;
     for(i = 0;i<x;i++)
@@ -101,7 +101,7 @@ void chushihua(char arr[hang][lie],int x,int y)//初始化棋盘为全空
         int j;
         for(j = 0;j<y;j++)
         {
-            arr[i][j] = ' ';
+            board[i][j] = ' ';
         }
     }
 }
@@ -188,6 +188,7 @@ void menu()//菜单
 }
 
 
+
 void test()//询问是否开始游戏
 {
     int input;
@@ -207,6 +208,7 @@ void test()//询问是否开始游戏
                 printf("退出游戏\n");
                 break;
             default:
+                system("cls");
                 printf("你小子故意找茬是吧\n");
                 break;
         }
