@@ -12,7 +12,7 @@ int qq(char board[hang][lie],int x,int y)//判断是否平局
     {
         for(j=0;j<y;j++)
         {
-            if(board[i][j]==' ')
+            if(board[i][j] == ' ')
             return 0;
         }
     }
@@ -40,7 +40,7 @@ int iswin(char board[hang][lie],int x,int y)//O人赢，X电脑赢，Q平局，C继续
     {
         return board[1][1];
     }
-    if(board[2][0]==board[1][1]&&board[1][1]==board[0][3]&&board[1][1] != ' ')//对角线2
+    if(board[2][0]==board[1][1]&&board[1][1]==board[0][2]&&board[1][1] != ' ')//对角线2
     {
         return board[1][1];
     }
@@ -54,7 +54,6 @@ int iswin(char board[hang][lie],int x,int y)//O人赢，X电脑赢，Q平局，C继续
 
 void computermove(char board[hang][lie],int x,int y)//电脑走
 {
-    printf("电脑走\n");
     while(1)
     {
         int i = rand()%x;
@@ -88,7 +87,7 @@ void playermove(char board[hang][lie],int x,int y)//人走
         }
         else
         {
-            printf("该坐标被占用");
+            printf("该坐标被占用\n");
         }
     }
 }
