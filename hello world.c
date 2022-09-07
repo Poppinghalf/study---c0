@@ -1,5 +1,18 @@
 #include<stdio.h>
-int main(){
-    printf("hello world\n");
-    return 0;
+#include<stdlib.h>
+#include<windows.h>
+int main()
+{
+char arr1[]={"hello world!!!"};
+char arr2[]={"              "};
+int left = 0;
+while(left<=strlen(arr2))
+{
+    arr2[left] = arr1[left];
+    left++;
+    Sleep(30);
+    system("cls");
+    printf("%s",arr2);
+}
+return 0;
 }
