@@ -14,7 +14,7 @@ while(left<=right)
     arr2[right] = arr1[right];
     left++;
     right--;
-    sleep(1);
+    Sleep(1);
     system("cls");
     printf("%s\n",arr2);
     }
