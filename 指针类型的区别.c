@@ -5,8 +5,8 @@ int main()
     int* pa = &a;
     char* pc = &a;
     printf("%p\n",pa);
-    printf("%p\n",pa+1);//int* èµ°4ä¸ªå­—èŠ‚
+    printf("%p\n",pa+1);//int* ×ß4¸ö×Ö½Ú
     printf("%p\n",pc);
-    printf("%p\n",pc+1);//char*èµ°1ä¸ªå­—èŠ‚
+    printf("%p\n",pc+1);//char*×ß1¸ö×Ö½Ú
     return 0;
 }
