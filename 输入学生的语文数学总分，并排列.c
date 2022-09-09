@@ -78,7 +78,7 @@ int main()
     }
     for(i=0;i<num;i++)//按成绩排名
     {
-        printf("第%d名:\n姓名:%s\n总分:%d\n",i+1,a[i].name,a[i].total);
+        printf("第%d名:\n姓名:%s\n总分:%d\n\n",i+1,a[i].name,a[i].total);
     }
     lookatme:
     printf("一切都结束了");
