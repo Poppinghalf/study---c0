@@ -9,10 +9,10 @@ int main()
     {
         int c = 5-i;
         scanf("%s",password);
-        if(strcmp(password,"123456") == 0)
+        if(strcmp(password,"abc123456") == 0)
             {
                 printf("ÃÜÂëÕıÈ·\n");
-            break;
+                break;
             }
         else
             {
