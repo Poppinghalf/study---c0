@@ -6,5 +6,6 @@ int main()
     int** pa = &p;
     int*** paa = &pa;
     printf("%p\n%p\n%p\n",p,pa,paa);
+    printf("%d",***paa);
     return 0;
 }
