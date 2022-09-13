@@ -128,7 +128,7 @@ void dayin(char arr[hang][lie],int x,int y)//¥Ú”°∆Â≈Ã
             for(z = 0;z<y;z++)
             {
                 printf("---");
-                if(z<lie-1)
+                if(z<y-1)
                 {
                     printf("|");
                 }
