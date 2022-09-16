@@ -24,13 +24,13 @@ int main()
 // #include<stdio.h>
 
 
-// int my_strlen(char* arr)
+// int my_strlen(char* str)
 // {
 //     int count = 0;
-//     while(*arr != '\0')
+//     while(*str != '\0')
 //     {
 //         count++;
-//         arr++;
+//         str++;
 //     }
 //     return count;
 // }
