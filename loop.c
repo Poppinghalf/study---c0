@@ -1,120 +1,40 @@
 #include<stdio.h>
+#include<string.h>
 int main()
 {
-    char arr[4];
-    int i;
-    printf("要输入几组\n");
-    scanf("%d",&i);
-        while(i>0)
-{
-    int count = 0;
-    printf("请输入不超过4个字符\n");
-    scanf("%s",arr);
-    if(arr[0] == 'l'&&arr[1] =='p')
-    {
-        count += 4;
-        if(arr[2] == 'l'&&arr[3] =='p')
-        {
-            count += 4;
-        }
-        else if(arr[2] == 'l'||arr[2] == 'o')
-        {
-            count += 1;
-            if(arr[3] == 'l'||arr[3] == 'o')
-            count += 1;
-            else
-            {
-                count += 2;
-            }
-        }
-        else
-        {
-            count += 2;
-            if(arr[3] == 'l'||arr[3] == 'o')
-            count += 1;
-            else
-            {
-                count += 2;
-            }
-        }
-    }
-    else if(arr[1] == 'l'&&arr[2] =='p')
-    {
-        count += 4;
-        if(arr[0] == 'l'||arr[0] == 'o')
-        {
-            count += 1;
-            {
-                if(arr[3] == 'l'||arr[3] == 'o')
-                {
-                    count += 1;
-                }
-                else
-                {
-                    count += 2;
-                }
-            }
-        }
-        else
-        {
-            count += 2;
-            {
-                if(arr[3] == 'l'||arr[3] == 'o')
-                {
-                    count += 1;
-                }
-                else
-                {
-                    count += 2;
-                }
-            }
-        }
-    }
-    else if(arr[2] == 'l'&&arr[3] =='p')
-    {
-        count += 4;
-        if(arr[0] == 'l'&&arr[1] =='p')
-        {
-            count += 4;
-        }
-        else if(arr[0] == 'l'||arr[0] == 'o')
-        {
-            count += 1;
-            if(arr[1] == 'l'||arr[1] == 'o')
-            count += 1;
-            else
-            {
-                count += 2;
-            }
-        }
-        else
-        {
-            count += 2;
-            if(arr[1] == 'l'||arr[1] == 'o')
-            count += 1;
-            else
-            {
-                count += 2;
-            }
-        }
-    }
-    else if(!(arr[0] == 'l'&&arr[1] =='p')&&!(arr[1] == 'l'&&arr[2] =='p')&&!(arr[2] == 'l'&&arr[3] =='p'))
+    char str[10000];
+    while(~scanf("%s",str))
     {
         int i;
-        for(i = 0;i<4;i++)
+        int len = strlen(str);
+        int count  =  0;
+        for(i = 0;i<len;i++)//先检索o
         {
-            if(arr[i] == 'l'||arr[i] == 'o')
+            if(str[i]=='o')
             {
-                count += 1;
-            }
-            else
-            {
-                count += 2;
+                count++;
             }
         }
+        for(i = 0;i<len;i++)//检索lp并且转化为o
+        {
+            if(str[i] == 'l'&&str[i+1]=='p')
+            {
+                count += 4;
+                str[i] = 'o';
+                str[i+1] = 'o';
+            }
+        }
+        for(i = 0;i<len;i++)//单独检索l\p
+        {
+            if(str[i]=='l')
+            {
+                count++;
+            }
+            else if(str[i]=='p')
+            {
+                count  += 2;
+            }
+        }
+        printf("%d\n",count);
     }
-    printf("%d\n",count);
-    i--;
-}
-    return 0;
 }
